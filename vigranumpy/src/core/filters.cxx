@@ -50,7 +50,7 @@ template <class PixelType>
 NumpyAnyArray 
 pythonNonlinearDiffusion2D(NumpyArray<3, Multiband<PixelType> > image, 
                            double edgeThreshold, double scale,
-                           NumpyArray<3, Multiband<float> > res=python::object())
+                           NumpyArray<3, Multiband<float> > res=NumpyArray<3, Multiband<float> >())
 {
 	res.reshapeIfEmpty(image.shape(), "nonlinearDiffusion2D(): Output array has wrong shape.");
     for(int k=0; k<image.shape(2); ++k)
