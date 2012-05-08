@@ -136,7 +136,7 @@ template < class VoxelType, unsigned int ndim >
 NumpyAnyArray 
 pythonGaussianGradientMagnitude(NumpyArray<ndim, Multiband<VoxelType> > volume,
                                 double sigma, bool accumulate, 
-                                NumpyAnyArray res=python::object())
+                                NumpyAnyArray res=NumpyAnyArray())
 {
     return accumulate
               ? pythonGaussianGradientMagnitudeND(volume, sigma, NumpyArray<ndim-1, Singleband<VoxelType> >(res))

@@ -1839,7 +1839,7 @@ typedef NumpyArray<3, RGBValue<float> >  NumpyFRGBVolume;
 typedef NumpyArray<3, Multiband<float> >  NumpyFMultibandImage;
 typedef NumpyArray<4, Multiband<float> >  NumpyFMultibandVolume;
 
-inline void import_vigranumpy()
+static inline void import_vigranumpy()
 {
     if(_import_array() < 0)
         pythonToCppException(0);
